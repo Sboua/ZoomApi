@@ -545,4 +545,7 @@ app.post('/rooms', (req, res) => {
     res.redirect("/rooms");
   });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log("Zoom Api Server Server Has Started!");
+ });
