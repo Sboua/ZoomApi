@@ -24,6 +24,7 @@ const payload = {
 const token = jwt.sign(payload, config.APISecret);
 
 
+
 //done
 app.get('/rooms', (req, res) => {
     var options = {
@@ -539,6 +540,10 @@ app.post('/rooms', (req, res) => {
           console.log('API call failed, reason ', err);
       });
   
+  });
+
+  app.all('*', function(req, res) {
+    res.redirect("/rooms");
   });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
