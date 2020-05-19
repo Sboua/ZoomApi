@@ -541,9 +541,9 @@ app.post('/rooms', (req, res) => {
   
   });
 
-  app.get('*', function(req, res) {
-    res.redirect("/rooms");
-  });
+  app.all('*', function(req, res) {
+    res.send("Path not set.")
+});
 
 
 app.listen(process.env.PORT, process.env.IP, function(){
