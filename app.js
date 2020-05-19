@@ -541,7 +541,7 @@ app.post('/rooms', (req, res) => {
   
   });
 
-  app.all('*', function(req, res) {
+  app.get('*', function(req, res) {
     res.redirect("/rooms");
   });
 
