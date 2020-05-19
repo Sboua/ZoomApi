@@ -13,7 +13,6 @@ app.use(
 app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
-var email, userid, resp;
 const port = 3000;
 
 //Use the ApiKey and APISecret from config.js
